@@ -9,7 +9,7 @@
 		zIndex: 9998, 
 		overflow: 'hidden'
 	}"
-	 @touchmove.stop.prevent>
+	 @touchmove.stop.prevent="() => {}">
 		<view v-for="(item, index) in RectNodes" :key="$u.guid()" :class="[animation ? 'skeleton-fade' : '']" :style="{
 			width: item.width + 'px', 
 			height: item.height + 'px', 

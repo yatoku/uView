@@ -24,8 +24,8 @@
 			top: $u.addUnit(height),
 			height: contentHeight + 'px'
 		}]"
-		 @tap="maskClick" @touchmove.stop.prevent>
-			<view @tap.stop.prevent class="u-dropdown__content__popup" :style="[popupStyle]">
+		 @tap="maskClick" @touchmove.stop.prevent="() => {}">
+			<view @tap.stop.prevent="() => {}" class="u-dropdown__content__popup" :style="[popupStyle]">
 				<slot></slot>
 			</view>
 			<view class="u-dropdown__content__mask"></view>

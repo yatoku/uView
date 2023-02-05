@@ -12,11 +12,11 @@
 				showDrawer ? 'u-drawer-content-visible' : '',
 				zoom && mode == 'center' ? 'u-animation-zoom' : ''
 			]"
-			@touchmove.stop.prevent
-			@tap.stop.prevent
+			@touchmove.stop.prevent="() => {}"
+			@tap.stop.prevent="() => {}"
 			:style="[style]"
 		>
-			<view class="u-mode-center-box" @tap.stop.prevent @touchmove.stop.prevent v-if="mode == 'center'" :style="[centerStyle]">
+			<view class="u-mode-center-box" @tap.stop.prevent="() => {}" @touchmove.stop.prevent="() => {}" v-if="mode == 'center'" :style="[centerStyle]">
 				<u-icon
 					@click="close"
 					v-if="closeable"

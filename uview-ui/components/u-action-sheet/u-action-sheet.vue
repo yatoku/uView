@@ -6,7 +6,7 @@
 		</view>
 		<block v-for="(item, index) in list" :key="index">
 			<view 
-				@touchmove.stop.prevent 
+				@touchmove.stop.prevent="() => {}" 
 				@tap="itemClick(index)" 
 				:style="[itemStyle(index)]" 
 				class="u-action-sheet-item u-line-1" 
@@ -19,7 +19,7 @@
 		</block>
 		<view class="u-gab" v-if="cancelBtn">
 		</view>
-		<view @touchmove.stop.prevent class="u-actionsheet-cancel u-action-sheet-item" hover-class="u-hover-class"
+		<view @touchmove.stop.prevent="() => {}" class="u-actionsheet-cancel u-action-sheet-item" hover-class="u-hover-class"
 		    :hover-stay-time="150" v-if="cancelBtn" @tap="close">{{cancelText}}</view>
 	</u-popup>
 </template>
